@@ -28,10 +28,20 @@ and make sure the first partition is available.
   ```txt
   i2c-dev
   ```
+  for Raspberry Pi4 B model:
+  ```txt
+  i2c-bcm2708
+  i2c-dev
+  ```
 - In the root of the `hassos-boot` partition, edit the file called `config.txt` add two lines
   to it:
   ```txt
   dtparam=i2c_vc=on
+  dtparam=i2c_arm=on
+  ```
+  for Raspberry Pi4 B model:
+  ```txt
+  dtparam=i2c1=on
   dtparam=i2c_arm=on
   ```
 
